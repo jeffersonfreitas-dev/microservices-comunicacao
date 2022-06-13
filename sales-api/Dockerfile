@@ -4,4 +4,4 @@ COPY package*.json ./
 RUN yarn 
 COPY . .
 EXPOSE 8082
-CMD ["nome", "app.js"]
+CMD ["node", "app.js"]
