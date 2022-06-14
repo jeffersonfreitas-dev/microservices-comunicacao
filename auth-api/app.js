@@ -1,5 +1,9 @@
 import express from "express";
 
+import * as db from "./src/config/db/InitialData.js";
+
+db.createInitialData();
+
 const app = express();
 const env = process.env;
 const PORT = env.port || 8080;
