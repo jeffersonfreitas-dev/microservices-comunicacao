@@ -19,4 +19,13 @@ public class ExceptionGlobalHandler {
         return ResponseEntity.badRequest().body(exceptionDetail);
     }
 
+    @ExceptionHandler(IdNotFoundException.class)
+    public ResponseEntity handlerIdNotFoundException(IdNotFoundException ex){
+        var exceptionDetail = new ExceptionDetail();
+        exceptionDetail.setStatus(HttpStatus.BAD_REQUEST.value());
+        exceptionDetail.setMessage(ex.getMessage());
+        exceptionDetail.setTimestamp(new Date());
+        return ResponseEntity.badRequest().body(exceptionDetail);
+    }
+
 }
