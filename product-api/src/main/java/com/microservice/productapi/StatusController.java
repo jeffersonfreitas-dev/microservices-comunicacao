@@ -1,4 +1,4 @@
-package com.microservice.productapi.controller;
+package com.microservice.productapi;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
