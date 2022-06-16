@@ -28,4 +28,13 @@ public class ExceptionGlobalHandler {
         return ResponseEntity.badRequest().body(exceptionDetail);
     }
 
+    @ExceptionHandler(AuthenticationException.class)
+    public ResponseEntity handlerAuthenticationException(AuthenticationException ex){
+        var exceptionDetail = new ExceptionDetail();
+        exceptionDetail.setStatus(HttpStatus.UNAUTHORIZED.value());
+        exceptionDetail.setMessage(ex.getMessage());
+        exceptionDetail.setTimestamp(new Date());
+        return new ResponseEntity(exceptionDetail, HttpStatus.UNAUTHORIZED);
+    }
+
 }
