@@ -3,6 +3,7 @@ package com.microservice.productapi.product.service;
 import com.microservice.productapi.category.service.CategoryService;
 import com.microservice.productapi.product.dto.ProductRequest;
 import com.microservice.productapi.product.dto.ProductResponse;
+import com.microservice.productapi.product.dto.ProductStockDTO;
 import com.microservice.productapi.product.model.Product;
 import com.microservice.productapi.product.repository.ProductRepository;
 import com.microservice.productapi.supplier.service.SupplierService;
@@ -26,5 +27,9 @@ public class ProductService {
                 .build();
         product = repository.save(product);
         return ProductResponse.of(product);
+    }
+
+    public void updateProductStock(ProductStockDTO productStockDTO){
+
     }
 }
