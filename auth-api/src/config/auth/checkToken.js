@@ -23,7 +23,7 @@ export default async (req, res, next) => {
         accessToken,
         secrets.API_SECRET
     );
-    req.authUser = decoded.authUser;
+    req.authUser = decoded;
     return next();
   } catch (error) {
     const status = error.status ? error.status : httpStatus.INTERNAL_SERVER_ERROR;

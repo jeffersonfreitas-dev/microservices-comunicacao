@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.BeanUtils;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.Random;
 
 @Data
 @Entity

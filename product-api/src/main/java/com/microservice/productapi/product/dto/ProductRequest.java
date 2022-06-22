@@ -1,5 +1,8 @@
 package com.microservice.productapi.product.dto;
 
+import lombok.Data;
+
+@Data
 public class ProductRequest {
 
     private String name;
@@ -7,7 +10,7 @@ public class ProductRequest {
     private Integer categoryId;
     private Integer supplierId;
 
-    public String getName() {
+     public String getName() {
         return name;
     }
 
@@ -43,4 +46,7 @@ public class ProductRequest {
         if(supplierId == null) throw new IllegalArgumentException("Fornecedor é obrigatório");
         this.supplierId = supplierId;
     }
+
+
+
 }
