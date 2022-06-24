@@ -35,4 +35,8 @@ public class Product {
     @JoinColumn(name = "FK_SUPPLIER", nullable = false)
     private Supplier supplier;
 
+    public void updateStock(Integer quantity){
+        this.quantity = this.quantity - quantity;
+    }
+
 }
